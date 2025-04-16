@@ -42,7 +42,7 @@ with st.expander("### 🧠 How it works (for now)", expanded=False):
 
     Enjoy the process, and watch your simulation unfold seamlessly!
     """)
-    
+
 with open("downloads/local_client", "rb") as f:
     st.download_button(
         label="🐧 Download Simulation Client (Linux)",
@@ -78,9 +78,9 @@ if choice == "simulate a 5G polar code":
     len_N = st.sidebar.selectbox(
     "Set 5G Polar Code Length",
     options=powers_of_2,
-    index=powers_of_2.index(1024),  # Default to 1024
+    index=powers_of_2.index(128),  # Default to 1024
     )
-    len_k = st.sidebar.number_input("Set Polar Code len_k", min_value=8, max_value=2048, value=512, step=8)
+    len_k = st.sidebar.number_input("Set Polar Code len_k", min_value=8, max_value=1024, value=64, step=8)
     decoder_algorithm = st.sidebar.selectbox("Decoder Algorithm", options=["SC", "SC-List", "SC-Flip"], index=0)
     crc_enable = st.sidebar.checkbox("Enable CRC", value=False)
     crc_length = st.sidebar.number_input("CRC Length", min_value=0, max_value=32, value=8, step=1, disabled=not crc_enable)
@@ -97,7 +97,7 @@ if choice == "simulate a 5G polar code":
     sim_type = st.sidebar.selectbox("Sweep Type", options=["SNR", "EbN0"], index=0)
     snr_start = st.sidebar.number_input("SNR Start (dB)", min_value=-20.0, max_value=50.0, value=1.0, step=0.1)
     snr_end = st.sidebar.number_input("SNR End (dB)", min_value=-20.0, max_value=50.0, value=2.0, step=0.1)
-    snr_step = st.sidebar.number_input("SNR Step (dB)", min_value=0.1, max_value=10.0, value=1.0, step=0.1)
+    snr_step = st.sidebar.number_input("SNR Step (dB)", min_value=0.1, max_value=10.0, value=0.25, step=0.05)
 
     st.sidebar.header("Simulation Loop Configuration")
     num_frames = st.sidebar.number_input("Number of Frames", min_value=1, max_value=1000000, value=1000, step=1)
