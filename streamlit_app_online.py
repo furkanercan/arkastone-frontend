@@ -7,6 +7,18 @@ import time
 import requests
 import uuid
 
+st.markdown("""
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z4NY98FFT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4Z4NY98FFT');
+</script>
+""", unsafe_allow_html=True)
+
+
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
 
