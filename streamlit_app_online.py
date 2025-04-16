@@ -26,23 +26,23 @@ st.markdown(
     """
 )
 
-st.markdown("""
-### 🧠 how it works (for now)
-Welcome to Arkastone's **serverless, BYOB (Bring Your Own Brains)-type simulator**.
+with st.expander("### 🧠 How it works (for now)", expanded=False):
+    st.markdown("""
+    Welcome to Arkastone's **serverless, BYOB (Bring Your Own Brains)-type simulator**.
 
-In simpler terms:
-- The simulation engine runs **locally on your machine**.
-- Arkastone handles the setup, configuration, and results.
+    In simpler terms:
+    - The simulation engine runs **locally on your machine**.
+    - Arkastone handles the setup, configuration, and results.
 
-### 🏃‍♂️ get going:
-1. **Download the simulation client** and run it on your machine.
-2. When prompted, **enter the session ID** displayed above.
-3. Choose your simulation and click **Run**.
-4. As your simulation runs, **results will stream back to the UI** in real-time.
+    ### 🏃‍♂️ get going:
+    1. **Download the simulation client** and run it on your machine.
+    2. When prompted, **enter the session ID** displayed above.
+    3. Choose your simulation and click **Run**.
+    4. As your simulation runs, **results will stream back to the UI** in real-time.
 
-Enjoy the process, and watch your simulation unfold seamlessly!
-""")
-
+    Enjoy the process, and watch your simulation unfold seamlessly!
+    """)
+    
 with open("downloads/local_client", "rb") as f:
     st.download_button(
         label="🐧 Download Simulation Client (Linux)",
