@@ -1,12 +1,3 @@
-import streamlit as st
-from src.utils.validation.config_loader import ConfigLoader
-from src.utils.validation.validation_manager import validate_config
-
-import plotly.graph_objects as go
-import time
-import requests
-import uuid
-
 st.markdown("""
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Z4NY98FFT"></script>
 <script>
@@ -18,6 +9,15 @@ st.markdown("""
 </script>
 """, unsafe_allow_html=True)
 
+
+import streamlit as st
+from src.utils.validation.config_loader import ConfigLoader
+from src.utils.validation.validation_manager import validate_config
+
+import plotly.graph_objects as go
+import time
+import requests
+import uuid
 
 if "session_id" not in st.session_state:
     st.session_state.session_id = str(uuid.uuid4())
