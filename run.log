@@ -1,3 +1,93 @@
 2025-04-15 17:58:25,291 - INFO - 'polar.decoder.list_size' not found. Defaulting to: 8.
 2025-04-15 17:58:27,944 - INFO - 'polar.decoder.list_size' not found. Defaulting to: 8.
 2025-04-15 17:58:33,377 - INFO - 'polar.decoder.list_size' not found. Defaulting to: 8.
+2025-04-15 23:29:38,809 - INFO - 'polar.decoder.list_size' not found. Defaulting to: 8.
+2025-04-15 23:29:49,542 - INFO - 'polar.decoder.list_size' not found. Defaulting to: 8.
+2025-04-15 23:30:46,152 - ERROR - Exception in callback _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438
+handle: <Handle _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438>
+Traceback (most recent call last):
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/streamlit/web/bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2438, in <lambda>
+    fut.add_done_callback(lambda f: f.result())
+                                    ^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2760, in get
+    await self.flush()
+asyncio.exceptions.CancelledError
+2025-04-25 16:20:53,917 - ERROR - Exception in callback _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438
+handle: <Handle _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438>
+Traceback (most recent call last):
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/streamlit/web/bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2438, in <lambda>
+    fut.add_done_callback(lambda f: f.result())
+                                    ^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2760, in get
+    await self.flush()
+asyncio.exceptions.CancelledError
+2025-04-25 16:32:52,742 - ERROR - Exception in callback _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438
+handle: <Handle _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438>
+Traceback (most recent call last):
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/streamlit/web/bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2438, in <lambda>
+    fut.add_done_callback(lambda f: f.result())
+                                    ^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2760, in get
+    await self.flush()
+asyncio.exceptions.CancelledError
+2025-04-25 23:32:18,060 - ERROR - Exception in callback _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438
+handle: <Handle _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell.../web.py:1746>>) at /home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py:2438>
+Traceback (most recent call last):
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/streamlit/web/bootstrap.py", line 347, in run
+    if asyncio.get_running_loop().is_running():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2438, in <lambda>
+    fut.add_done_callback(lambda f: f.result())
+                                    ^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/home/furkan/arkastone-frontend/.venv/lib/python3.12/site-packages/tornado/web.py", line 2760, in get
+    await self.flush()
+asyncio.exceptions.CancelledError

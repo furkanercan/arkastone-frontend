@@ -30,10 +30,9 @@ def validate_config_code(config_code):
 def validate_config_modulator(config_mod):
     required_keys = {
         "type": str,
+        "demod_type": str
     }
-
-    validate_required_keys(config_mod, required_keys, "code")
-
+    validate_required_keys(config_mod, required_keys, "mod")
     return config_mod
 
 
@@ -48,7 +47,7 @@ def validate_config_channel(config_chn):
     }
 
     validate_required_keys(config_chn, required_keys, "config_chn")
-
+    validate_optional_keys(config_chn, optional_keys, "config_chn")
 
     return config_chn
 
@@ -100,9 +99,6 @@ def validate_config_sim_snr(config_sim_snr):
     # Ensure 'step' is positive
     if step <= 0:
         raise ValueError(f"'channel.snr.step' ({step}) must be positive.")
-
-    config_sim_snr["simpoints"] = np.arange(start, end + step, step, dtype=float)
-    config_sim_snr["len_points"] = len(config_sim_snr["simpoints"])
 
     return config_sim_snr
 

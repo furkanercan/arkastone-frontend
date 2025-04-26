@@ -96,6 +96,12 @@ if choice == "simulate a 5G polar code":
     )
     len_k = st.sidebar.number_input("Set Polar Code len_k", min_value=8, max_value=1024, value=64, step=8)
     decoder_algorithm = st.sidebar.selectbox("Decoder Algorithm", options=["SC", "SC-List", "SC-Flip"], index=0)
+    list_size = 8  # Default to None if not applicable
+    scf_iters = 10  # Default to None if not applicable
+    if decoder_algorithm == "SC-List":
+        list_size = st.sidebar.number_input("List Size for SC-List", min_value=1, max_value=64, value=8, step=1)
+    elif decoder_algorithm == "SC-Flip":
+        scf_iters = st.sidebar.number_input("SC-Flip Iterations", min_value=1, max_value=200, value=10, step=1)
     crc_enable = st.sidebar.checkbox("Enable CRC", value=False)
     crc_length = st.sidebar.number_input("CRC Length", min_value=0, max_value=32, value=8, step=1, disabled=not crc_enable)
 
@@ -133,6 +139,8 @@ if choice == "simulate a 5G polar code":
             config["code"]["polar"]["polar_file"] = polar_file_map[len_N]
             config["code"]["len_k"] = len_k
             config["code"]["polar"]["decoder"]["algorithm"] = decoder_algorithm
+            config["code"]["polar"]["decoder"]["list_size"] = list_size
+            config["code"]["polar"]["decoder"]["flip_max_iters"] = scf_iters
             config["code"]["polar"]["crc"]["enable"] = crc_enable
             config["code"]["polar"]["crc"]["length"] = crc_length
             config["code"]["polar"]["quantize"]["enable"] = quantize_enable
